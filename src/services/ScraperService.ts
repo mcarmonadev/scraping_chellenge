@@ -191,7 +191,7 @@ export class ScraperService {
            * Procesa los documentos iterando del listado de documentos adjuntos del expediente 
            * Descarga documentos PDF desde 2 casos:
            *  A) Si el formato del doc es un documento HTML (REPORTE_HTML) debe hacerle scraping al archivo html como si clickease el documento en ui
-           *        por que el documento html tiene un botón "GERAR PDF" donde un atributo contiene los parámetros para descarga su versión PDF
+           *        porque el documento html tiene un botón "GERAR PDF" donde un atributo contiene los parámetros para descarga su versión PDF
            *      
            *    El scraping de la versión html el archivo ser realiza mediante el método this.htmlDocScraper.scrapDocumentHtmlFile
            * 
@@ -199,9 +199,9 @@ export class ScraperService {
            * 
            *  B) Si es el formato del doc es PDF desde a este punto ya viene indicado y ya se habia scrapeado antes la url necesaria para 
            *      ir a descargarlo, esa url se obtuvo desde la ui del expdiente en el listado, asi que ya lo podemos
-           *      descargar mediante this.pdfDownloader.downloadPdfFromURL, pues 
+           *      descargar mediante this.pdfDownloader.downloadPdfFromURL 
            * 
-           *  El outputManager recibirá información sobre los fallos que hayan, por eso es pasado como parámetro en los ambos casos (3 llamadas)
+           *  El outputManager recibirá información sobre los fallos que hayan, por eso es pasado como parámetro en los 2 ambos casos (3 llamadas)
            */
 
           if(doc.formatoDocumento==="ARCHIVO_PDF"){          
@@ -327,8 +327,8 @@ export class ScraperService {
 
       // Inyectar las fechas vacías para Date pero con el mes/año actual en CurrentDate      
       // Filtro con la misma fecha en inicio y fin, es un requisito en el 
-      // endpoint, si el filtro es id-proceso, de lo contrario trae algo asi como 'todos los registros
-      // Eso para CurrentDate, lo otros e fecha InputDate, son los que permanecen vacíos
+      // endpoint, si el filtro es id-proceso, de lo contrario trae algo asi como 'todos los registros'
+      // Eso para CurrentDate, lo otros de fecha InputDate, son los que permanecen vacíos
       params.append('fPP:dataAutuacaoDecoration:dataAutuacaoInicioInputDate', '');
       params.append('fPP:dataAutuacaoDecoration:dataAutuacaoInicioInputCurrentDate', mesAnioActual);
       params.append('fPP:dataAutuacaoDecoration:dataAutuacaoFimInputDate', '');
