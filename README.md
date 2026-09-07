@@ -61,8 +61,8 @@ Solución de extracción de datos, navegación de actas judiciales y descarga re
 
 1. **Clonar el repositorio:**
     ```bash
-   git clone <URL_DE_TU_REPOSITORIO>
-   cd <NOMBRE_DE_LA_CARPETA>
+   git clone https://github.com/mcarmonadev/scraping_chellenge.git
+   cd scraping_chellenge-main
 
 
 2. **Instalar dependencias:**
